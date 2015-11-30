@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# The logic to start up your application should be put in this
+# script. The application will work only if it binds to
+# $OPENSHIFT_DIY_IP:$OPENSHIFT_DIY_PORT
+
+MOJO_HOME="$OPENSHIFT_REPO_DIR/diy" "$OPENSHIFT_DATA_DIR/perl/bin/morbo" \
+          --listen="http://$OPENSHIFT_DIY_IP:$OPENSHIFT_DIY_PORT" \
+          "$OPENSHIFT_REPO_DIR/diy/script/diy" |& /usr/bin/logshifter -tag diy &
