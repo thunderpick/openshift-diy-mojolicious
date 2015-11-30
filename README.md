@@ -1,4 +1,4 @@
-OpenShift-DIY-Perl
+openshift-diy-mojolicious
 ====================
 
 Steps to support Perl 5.16 or newer version on OpenShift.com
